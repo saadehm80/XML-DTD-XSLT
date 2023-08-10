@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT rapport (mandat+) >
-<!ELEMENT mandat (expediteur,destinateur) >
-<!-- <!ELEMENT mandat (expediteur,destinateur) > on s'en fou de l'ordre -->
+<!ELEMENT mandat (expediteur,destinataire) >
+<!-- <!ELEMENT mandat (expediteur,destinataire) > on s'en fou de l'ordre -->
 <!ELEMENT  expediteur EMPTY>
-<!ELEMENT  destinateur EMPTY>
+<!ELEMENT  destinataire EMPTY>
 
 <!ATTLIST mandat 
              num     CDATA #REQUIRED
@@ -16,7 +16,7 @@
              prenom CDATA   #REQUIRED
              ville  CDATA   #IMPLIED>
              
-<!ATTLIST destinateur 
+<!ATTLIST destinataire 
              cin    NMTOKEN #REQUIRED
              nom    CDATA   #REQUIRED
              prenom CDATA   #REQUIRED

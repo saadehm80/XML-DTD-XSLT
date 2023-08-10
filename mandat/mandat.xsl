@@ -8,39 +8,39 @@
             <body>            
                     <table border="1" width="75%">
                         <tr>
-                            <th>Num. mandat</th> <th>Date mandat</th><th>Expediteur</th><th>Destinateur</th><th>Etat</th><th>Montants</th>
+                            <th>Num. mandat</th> <th>Date mandat</th><th>Expediteur</th><th>Destinataire</th><th>Etat</th><th>Montants</th>
                         </tr>
                         
                         <xsl:for-each select="rapport/mandat">
                             <tr>
-                                <td><xsl:value-of select="@num"/></td>
-                                <td><xsl:value-of select="@date"/></td>
+                                <td><xsl:value-of select="@num"></xsl:value-of></td>
+                                <td><xsl:value-of select="@date"></xsl:value-of></td>
                                 <td>
                                     <ul>
-                                        <li>Cin: <xsl:value-of select="expediteur/@cin"/></li>   
-                                        <li>Nom : <xsl:value-of select="expediteur/@nom"/></li>  
+                                        <li>Cin: <xsl:value-of select="expediteur/@cin"></xsl:value-of></li>   
+                                        <li>Nom: <xsl:value-of select="expediteur/@nom"></xsl:value-of></li>  
                                     </ul>                                
                                 </td>
                                 <td>
                                     <ul>
-                                        <li>Cin: <xsl:value-of select="destinateur/@cin"/></li>   
-                                        <li>Nom : <xsl:value-of select="destinateur/@nom"/></li>  
+                                        <li>Cin: <xsl:value-of select="destinataire/@cin"></xsl:value-of></li>   
+                                        <li>Nom : <xsl:value-of select="destinataire/@nom"></xsl:value-of></li>  
                                     </ul>                                
                                 </td>                                       
-                                <td><xsl:value-of select="@etat"/></td>
-                                <td><xsl:value-of select="@montant"/></td>
+                                <td><xsl:value-of select="@etat"></xsl:value-of></td>
+                                <td><xsl:value-of select="@montant"></xsl:value-of></td>
                             </tr>
                         </xsl:for-each>
                         <tr>
                             <td colspan="5">Total des mandats</td>
                             <td>
-                                <xsl:value-of select="sum(rapport/mandant/@montant)"/>
+                                <xsl:value-of select="sum(rapport/mandat/@montant)"></xsl:value-of>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="5">Total des mandats recus</td>
                             <td>
-                                <xsl:value-of select="sum(rapport/mandant[@etat='RECU']/@montant)"/>
+                                <xsl:value-of select="sum(rapport/mandat[@etat='RECU']/@montant)"></xsl:value-of>
                             </td>
                         </tr>
                     </table>

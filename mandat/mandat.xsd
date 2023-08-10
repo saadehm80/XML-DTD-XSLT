@@ -11,11 +11,11 @@
     <xsd:complexType name="T_MANDAT">
         <xsd:sequence><!-- Choice: l'un ou l'autre, Sequence: ordre, All: non ordre -->
             <xsd:element name="expediteur" type="T_ED"> </xsd:element>
-            <xsd:element name="destinateur" type="T_ED"> </xsd:element>
+            <xsd:element name="destinataire" type="T_ED"> </xsd:element>
         </xsd:sequence>
         <xsd:attribute name="num" type="xsd:int" use="required"> </xsd:attribute>
         <xsd:attribute name="date" type="xsd:date" use="required"> </xsd:attribute>
-        <xsd:attribute name="montant" type="xsd:int" use="required"> 
+        <xsd:attribute name="montant" use="required"> 
         <xsd:simpleType>
             <xsd:restriction base="xsd:double">
                 <xsd:minInclusive value="50"></xsd:minInclusive>
