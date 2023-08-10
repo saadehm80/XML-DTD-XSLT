@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<operateur xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:noNamespaceSchemaLocation="./operateur.xsd">
+    <client code="1" nom="A">
+        <abonnement numAb="111" dateAb="2012-12-11" type="GSM">
+            <facture numFact="444" dateFact="2012-10-10" montant="9700.45" reglee="Non"/>
+            <facture numFact="333" dateFact="2012-11-10" montant="8700.45" reglee="Oui"/>
+            <facture numFact="222" dateFact="2012-10-10" montant="7700.45" reglee="Non"/>
+        </abonnement>
+        <abonnement numAb="222" dateAb="2012-12-11" type="Fixe">
+            <facture numFact="555" dateFact="2012-11-10" montant="8700.45" reglee="Oui"/>
+            <facture numFact="222" dateFact="2012-10-10" montant="7700.45" reglee="Non"/>
+        </abonnement>
+    </client>
+    <client code="2" nom="B">
+        <abonnement numAb="333" dateAb="2012-12-11" type="GSM">
+            <facture numFact="777" dateFact="2012-10-10" montant="2700.45" reglee="Non"/>
+            <facture numFact="555" dateFact="2012-10-10" montant="5700.45" reglee="Non"/>
+        </abonnement>
+        <abonnement numAb="441" dateAb="2012-12-11" type="Fixe">
+            <facture numFact="551" dateFact="2012-11-10" montant="700.45" reglee="Oui"/>
+            <facture numFact="552" dateFact="2012-10-10" montant="750.45" reglee="Non"/>
+            <facture numFact="999" dateFact="2012-11-10" montant="4700.45" reglee="Oui"/>
+        </abonnement>
+    </client>
+</operateur>

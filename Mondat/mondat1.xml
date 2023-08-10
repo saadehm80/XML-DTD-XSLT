@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rapport>
+    <mandat num="7124536" date="2007-1-1" montant="1000" etat="recu">
+        <expediteur cin="A12345" nom="Slimani" prenom="Youssef" ville="Casa"/>
+        <destinateur cin="P98654" nom="Hassouni" prenom="Laila" ville="Fes"/>
+    </mandat>
+    <mandat num="7124537" date="2007-1-1" montant="3200" etat="non recu">
+        <expediteur cin="M12345" nom="Alaoui" prenom="Mohamed" ville="Marakech"/>
+        <destinateur cin="M92654" nom="Alaoui" prenom="Imane" ville="Fes"/>
+    </mandat>
+    <mandat num="7124538" date="2007-1-1" montant="500" etat="recu">
+        <expediteur cin="H123222" nom="Qasmi" prenom="Slim" ville="Oujda"/>
+        <destinateur cin="B91154" nom="Qasmi" prenom="Hassan" ville="Rabat"/>
+    </mandat>
+</rapport>

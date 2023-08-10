@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+    <xsd:element name="operateur">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="client" maxOccurs="unbounded" type="T_CLIENT">
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="T_CLIENT">
+        <xsd:sequence>
+            <xsd:element name="abonnement" maxOccurs="unbounded" type="T_ABON">
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="code" type="xsd:string" use="required"> </xsd:attribute>
+        <xsd:attribute name="nom" type="xsd:string" use="required"> </xsd:attribute>
+    </xsd:complexType>
+    <xsd:complexType name="T_ABON">
+        <xsd:sequence>
+            <xsd:element name="facture" maxOccurs="unbounded" type="T_FACT">
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="numAb" type="xsd:int" use="required"> </xsd:attribute>
+        <xsd:attribute name="dateAb" type="xsd:date" use="required"> </xsd:attribute>
+        <xsd:attribute name="type" default="GSM">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="GSM"></xsd:enumeration>
+                <xsd:enumeration value="Fixe"></xsd:enumeration>
+                <xsd:enumeration value="Internet"></xsd:enumeration>
+            </xsd:restriction>  
+        </xsd:simpleType> 
+        </xsd:attribute>
+    </xsd:complexType>
+    <xsd:complexType name="T_FACT">
+        <xsd:attribute name="numFact" type="xsd:int" use="required"></xsd:attribute>
+        <xsd:attribute name="dateFact" type="xsd:date" use="required"></xsd:attribute>
+        <xsd:attribute name="montant" type="xsd:double" use="required"></xsd:attribute>
+        <xsd:attribute name="reglee" default="Non">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+              <xsd:enumeration value="Oui"></xsd:enumeration>
+              <xsd:enumeration value="Non"></xsd:enumeration>
+          </xsd:restriction>  
+        </xsd:simpleType> 
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+<xsd:element name="biblio">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="etudiant" minOccurs="1" maxOccurs="unbounded" type="TYPE_ET">
+                
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+<xsd:complexType name="TYPE_ET">
+    <xsd:sequence>
+        <xsd:element name="livre" minOccurs="1" maxOccurs="unbounded" type="TYPE_LIVRE"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="code" type="xsd:string" use="required"></xsd:attribute>
+    <xsd:attribute name="nom" type="xsd:string" use="required"></xsd:attribute>
+    <xsd:attribute name="prenom" type="xsd:string" use="optional" ></xsd:attribute>
+    <xsd:attribute name="age">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:int">
+                <xsd:minExclusive value="16"></xsd:minExclusive>
+                <xsd:maxInclusive value="65"></xsd:maxInclusive>            
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+</xsd:complexType>
+
+    <xsd:complexType name="TYPE_LIVRE">
+        <xsd:attribute name="id" type="xsd:int" use="required"></xsd:attribute>
+        <xsd:attribute name="titre" type="xsd:string" use="required"></xsd:attribute>
+        <xsd:attribute name="dateEmprunt" type="xsd:date"></xsd:attribute>
+        <xsd:attribute name="rendu" default="NON">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string" >
+                    <xsd:enumeration value="OUI"></xsd:enumeration>
+                    <xsd:enumeration value="NON"></xsd:enumeration>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

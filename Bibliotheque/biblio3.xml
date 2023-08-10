@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="./biblio.xsd">
+    <etudiant code="E1" nom="Hassani" prenom="Mohamed" age="23">
+        <livre id="1" titre="Java" dateEmprunt="2022-11-12"   rendu="NON"/>
+        <livre id="2" titre="XML" dateEmprunt="2022-12-11" rendu="OUI"/>
+        <livre id="3" titre="Java" dateEmprunt="2022-11-12"   rendu="NON"/>       
+        <livre id="4" titre="Java" dateEmprunt="2022-11-12"   rendu="NON"/>
+        <livre id="5" titre="XML" dateEmprunt="2022-12-11" rendu="OUI"/>
+    </etudiant>
+    <etudiant code="E2" nom="Ibrahimi" prenom="Emina" age="21">
+        <livre id="1" titre="Java" dateEmprunt="2022-01-22"/>
+    </etudiant>
+</biblio>

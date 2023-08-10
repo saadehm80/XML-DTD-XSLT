@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE operateur SYSTEM "./operateur.dtd">
+<operateur>
+    <client code="" nom="">
+        <abonnement numero="1" dateAb="" type="GSM">
+            <facture num="1" dateFact="" montant="" reglee="Non"/>
+        </abonnement>
+        <abonnement numero="2" dateAb="" type="GSM">
+            <facture num="2" dateFact="" montant="" reglee="Non"/>
+            <facture num="3" dateFact="" montant="" reglee="Oui"/>
+            <facture num="4" dateFact="" montant="" reglee="Oui"/>
+        </abonnement>
+    </client>
+    <client code="" nom="">
+        <abonnement numero="5" dateAb="" type="GSM">
+            <facture num="6" dateFact="" montant="" reglee="Oui"/>
+        </abonnement>
+        <abonnement numero="7" dateAb="" type="GSM">
+            <facture num="8" dateFact="" montant="" reglee="Non"/>
+            <facture num="9" dateFact="" montant="" reglee="Oui"/>
+            <facture num="10" dateFact="" montant="" reglee="Non"/>
+        </abonnement>
+    </client>
+</operateur>
